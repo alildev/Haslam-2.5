@@ -52,11 +52,9 @@ html {
 	@include respond(tab-port) { // width < 900?
 		font-size: 50%; //1rem = 8px, 8/16 = 50%
 	}
-
 	@include respond(phone) { // width < 600?
 		font-size: 30%; //1rem = 4.8px
 	}
-
 	@include respond(big-desktop) {
 		font-size: 75%; //1rem = 12px, 12/16 = 75%
 	} */
@@ -144,16 +142,11 @@ main {
             rgba(18,60,105,0.95)),
         url(../img/background-5070834_960_720.webp); 
     
-    /* Flex Properties */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    
-    transform: skewY(-5deg);
-    margin-top: -8.5rem;
-    height: 99vh;
-    padding: 25rem 0;
+    align-items: center;    
+    height: 85vh;
+    padding: 10rem 0;
 }
 
 .hero-text, .hero-subtext {
@@ -162,8 +155,45 @@ main {
     line-height: 1.26;
     letter-spacing: -1.75px;
     color: var(--color-primary-white);
-    
-    transform: skewY(5deg);
+}
+
+
+
+/* TEXT BANNER */
+.marquee { 
+    color: var(--color-primary-dark-pink); 
+    background: var(--color-primary-white);
+    width: 100%;
+    height: 15vh;
+    line-height: 120px;
+    overflow: hidden;
+    position: relative;
+    border: var(--line-test);
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    height: 120px;
+    font-size: 30px;
+    animation-name: slide;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    from { left:100%; transform: translate(0, 0); }
+    to { left: -100%; transform: translate(-100%, 0); }
+}
+@-webkit-keyframes slide {
+    from { left:100%; transform: translate(0, 0); }
+    to { left: -100%; transform: translate(-100%, 0); }
 }
 
 
@@ -176,23 +206,21 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5rem;
-    transform: skewY(5deg);
-
+    padding-left: 15rem;
 }
 
 .search-form {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30rem;
+    width: 40rem;
 }
 
 .input {
     background-color: var(--color-primary-white);
     border: none;
     border-radius: 100px;
-    padding: 2rem 3rem;
+    padding: 1.5rem 1.5rem;
     transition: all .2s;
     margin-right: -3rem;
     width: 80%;
@@ -233,7 +261,68 @@ input::placeholder {
 }
 
 
+/* HERO */
+.hero {
+    /* Test Properties */
+    background-image: linear-gradient(
+        to right bottom,
+            rgba(18,60,105,0.95),
+            rgba(18,60,105,0.95)),
+        url(../img/background-5070834_960_720.webp); 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    height: 85vh;
+    padding: 10rem 0;
+}
 
+.hero-text, .hero-subtext {
+    font-size: 4rem;
+    font-weight: 650;
+    line-height: 1.26;
+    letter-spacing: -1.75px;
+    color: var(--color-primary-white);
+    }
+
+
+
+/* TEXT BANNER */
+.marquee { 
+    color: var(--color-primary-dark-pink); 
+    background: var(--color-primary-white);
+    width: 100%;
+    height: 15vh;
+    line-height: 120px;
+    overflow: hidden;
+    position: relative;
+    border: var(--line-test);
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    height: 120px;
+    font-size: 30px;
+    animation-name: slide;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    from { left:100%; transform: translate(0, 0); }
+    to { left: -100%; transform: translate(-100%, 0); }
+}
+@-webkit-keyframes slide {
+    from { left:100%; transform: translate(0, 0); }
+    to { left: -100%; transform: translate(-100%, 0); }
+}
 
 
 /* CONTENT */
@@ -329,9 +418,9 @@ ol, li {
     animation-name: none;
 }
 
-.carousel-navigation {
+/* .carousel-navigation {
     
-}
+} */
 
 
 
@@ -360,9 +449,9 @@ ol, li {
     98% {
         left: -300%;
     }
-    99% (
+    99% {
         left: 0;
-    )
+    }
 }
 
 @keyframes snap {
