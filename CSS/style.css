@@ -273,8 +273,8 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;    
-    height: 85vh;
-    padding: 10rem 0;
+    height: 95vh;
+    padding: 7rem 10rem;
 }
 
 .hero-text, .hero-subtext {
@@ -285,6 +285,14 @@ input::placeholder {
     color: var(--color-primary-white);
     }
 
+.slideshow {
+    padding: 1rem;
+    padding-top: 3rem;
+    height: 95%;
+    width: 90%;
+    border-radius: 40px;
+    transition: all 5s;
+}
 
 
 /* TEXT BANNER */
@@ -333,10 +341,28 @@ input::placeholder {
     margin-top: -8.5rem;
 }
 
+.container {
+    position: relative;
+    margin: 0;
+}
+
+.new-pic {
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    transition: opacity 4s ease;
+    -webkit-transition: opacity 4s ease;
+}
+
+
+#bottom img:hover {
+    opacity: 0;
+    transition: all 1s;
+}
 
 
 /* Carousel */
-ol, li {
+/* ol, li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -416,7 +442,7 @@ ol, li {
 .carousel:focus-within
 .carousel-snapper {
     animation-name: none;
-}
+} */
 
 /* .carousel-navigation {
     
