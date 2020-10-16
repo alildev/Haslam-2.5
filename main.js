@@ -1,47 +1,26 @@
-// if (
-//     "IntersectionObserver" in window &&
-//     "IntersectionObserverEntry" in window &&
-//     "intersectionRatio" in window.IntersectionObserverEntry.prototype
-// ) {
+let i = 0; //start point
+let images = [];
+let time = 5000;
 
-// let observer = new IntersectionObserver(entries => {
-// if (entries[0].boundingClientRect.y < 0) {
-//     document.body.classList.add("header-not-at-top");
-//     } else {
-//     document.body.classList.remove("header-not-at-top");
-//     }
-// });
-// observer.observe(document.querySelector("#top-of-site-pixel-anchor"));
-// }
+//Image List
+images[0] = 'img/book-covers/book1.jpg';
+images[1] = 'img/book-covers/book2.jpg';
+images[2] = 'img/book-covers/book3.jpg';
+images[3] = 'img/book-covers/book4.jpg';
 
+//Change Image
 
-const body = document.body;
-const triggerMenu = document.querySelector(".page-header .trigger-menu");
-const nav = document.querySelector(".page-header nav");
-const menu = document.querySelector(".page-header .menu");
-const scrollUp = "scroll-up";
-const scrollDown = "scroll-down";
-let lastScroll = 0;
+function changeImg() {
+    document.slide.src = images[i];
 
-triggerMenu.addEventListener("click", () => {
-    body.classList.toggle("menu-open");
-});
+    if(i < images.length - 1) {
+        i++;
+    } else {
+        i = 0
+    }
 
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-        if (currentScroll <= 0) {
-    body.classList.remove(scrollUp);
-    return;
+    setTimeout("changeImg()", time);
+
 }
 
-if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
-    // down
-    body.classList.remove(scrollUp);
-    body.classList.add(scrollDown);
-} else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
-    // up
-    body.classList.remove(scrollDown);
-    body.classList.add(scrollUp);
-}
-    lastScroll = currentScroll;
-});
+window.onload = changeImg;
