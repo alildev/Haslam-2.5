@@ -134,20 +134,16 @@ main {
 
 /* Search */
 .search-field {
-    /* Test Properties */
-    /* background-color: orangered; */
-
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 15rem;
 }
 
 .search-form {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40rem;
+    width: 30rem;
 }
 
 .input {
@@ -208,7 +204,7 @@ input::placeholder {
     flex-direction: column;
     align-items: center;    
     height: 95vh;
-    padding: 7rem 10rem;
+    padding: 7rem 7rem;
 }
 
 .hero-text, .hero-subtext {
@@ -220,8 +216,7 @@ input::placeholder {
     }
 
 .slideshow {
-    padding: 1rem;
-    padding-top: 3rem;
+    padding: 3rem;
     height: 95%;
     width: 90%;
     border-radius: 40px;
@@ -231,14 +226,14 @@ input::placeholder {
 
 /* Text Banner */
 .marquee { 
-    color: var(--color-primary-dark-pink); 
-    background: var(--color-primary-white);
+    color: #000000; 
+    background: var(--color-primary-grey);
     width: 100%;
-    height: 15vh;
-    line-height: 120px;
+    height: 10vh;
+    line-height: 60px;
     overflow: hidden;
     position: relative;
-    border-bottom: var(--line-test);
+    /* border: 5px solid grey; */
 }
 
 .text {
@@ -269,39 +264,24 @@ input::placeholder {
 
 /* CONTENT */
 .content {
-    background-color: orchid;
-    margin: 0;
-    display: flex;
+    background-color: var(--color-primary-white);
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-template-rows: 45rem 45rem;
+    grid-row-gap: 20rem;
 
     padding: 10rem;
 }
 
-.container {
-    position: relative;
-    margin: 0;
-}
-
-.new-pic {
-    position: absolute;
-    left: 0;
-    opacity: 1;
-    transition: opacity 4s ease;
-    -webkit-transition: opacity 4s ease;
-}
-
-#bottom img:hover {
-    opacity: 0;
-    transition: all 1s;
-}
-
 /* Cards */
 .award-cards {
-    background-color: orangered;
+    background-color: var(--color-primary-grey);
     min-width: 100%;
-    min-height: 200px;
+    height: 400px;
     display: flex;
+    align-items: center;
     overflow-x: auto;
 }
 
@@ -315,8 +295,16 @@ input::placeholder {
     margin: 5px;
 }
 
+.card-cover {
+    min-width: 150px;
+    height: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+}
+
 .seasonal-cards {
-    background-color: orangered;
+    background-color: green;
     min-width: 100%;
     min-height: 200px;
     display: flex;
