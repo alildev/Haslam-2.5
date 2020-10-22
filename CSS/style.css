@@ -72,6 +72,10 @@ main {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 
 /* HEADER */
@@ -103,7 +107,7 @@ main {
 
 .menu-options li a {
     font-weight: 650;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     letter-spacing: 1;
     padding: 0.5rem 1rem;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -268,15 +272,73 @@ input::placeholder {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    display: grid;
-    grid-template-rows: 45rem 45rem;
-    grid-row-gap: 20rem;
+    /* display: grid;
+    grid-template-rows: 1px 45rem 45rem;
+    grid-row-gap: 20rem; */
 
     padding: 10rem;
 }
 
+
 /* Cards */
-.award-cards {
+.award-books {
+    background-color: var(--color-primary-white);
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+.award-books__text {
+    font-size: 28px;
+    color: var(--color-primary-dark-blue);    
+}
+
+
+.list-icon {
+    height: 4.5rem;
+    width: 9rem;
+    stroke: var(--color-primary-white);
+    background: var(--color-primary-dark-pink);
+    border-radius: 20px 5px 20px;
+    transition: transform 250ms ease-in, box-shadow 250ms ease-in;
+}
+
+.list-icon:hover {
+    box-shadow: 0px 11px 18px rgba(0,0,0,0.3);
+    transform: scale(1.025);
+    background-color: #8F1E49; 
+}
+
+.list-button {
+    background-color: var(--color-primary-dark-pink);
+    border-radius: 100px;
+    height: 4.5rem;
+    width: 9rem;
+    text-decoration: none;
+    border-radius: 5px 20px 5px;
+    transition: transform 250ms ease-in, box-shadow 250ms ease-in;
+}
+
+.list-button:hover {
+    box-shadow: 0px 11px 18px rgba(0,0,0,0.3);
+    transform: scale(1.025);
+    /* box-shadow: 1px 7px 13px 0px rgba(67,0,17,0.13);
+    transform: scale(1.025); */
+    background-color: #8F1E49;
+}
+
+.list-button__text {
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--color-primary-white);
+    text-transform: uppercase;
+    font-family: 'Cherry Cream Soda', cursive;
+}
+
+.cards {
     background-color: var(--color-primary-grey);
     min-width: 100%;
     height: 400px;
@@ -285,7 +347,7 @@ input::placeholder {
     overflow-x: auto;
 }
 
-.award-card::-webkit-scrollbar {
+.card::-webkit-scrollbar {
     display: none;
 }
 
@@ -298,9 +360,30 @@ input::placeholder {
 .card-cover {
     min-width: 150px;
     height: 300px;
-    margin: 1rem;
-    border-radius: 3px;
-    box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+    margin: 0.25em;
+    border-radius:4px;
+    transition: transform 200ms ease-in, box-shadow 200ms ease-in;
+}
+
+.card-cover:hover {
+    box-shadow: 0px 11px 18px rgba(0,0,0,0.3);
+    transform: scale(1.025);
+}
+
+.seasonal-books {
+    background-color: var(--color-primary-white);
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-decoration: none;
+    padding-top: 10rem;
+    padding-bottom: 10px;
+}
+
+.seasonal-books__text {
+    font-size: 28px;
+    color: var(--color-primary-dark-blue);    
 }
 
 .seasonal-cards {
@@ -324,8 +407,7 @@ input::placeholder {
 
 /* FOOTER */
 .footer {
-    border: var(--line-test);
-    background: #616161;
+    background: var(--color-primary-dark-blue);
 }
 
 
