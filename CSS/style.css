@@ -291,12 +291,6 @@ input::placeholder {
     padding-bottom: 10px;
 }
 
-.award-books__text {
-    font-size: 28px;
-    color: var(--color-primary-dark-blue);    
-}
-
-
 .list-icon {
     height: 4.5rem;
     width: 9rem;
@@ -370,7 +364,9 @@ input::placeholder {
     transform: scale(1.025);
 }
 
-.seasonal-books {
+.seasonal-books, 
+.epidemic-books,
+.horror-books {
     background-color: var(--color-primary-white);
     display: flex;
     /* align-items: flex-start; */
@@ -381,7 +377,10 @@ input::placeholder {
     padding-bottom: 10px;
 }
 
-.seasonal-books__text {
+.award-books__text,
+.seasonal-books__text, 
+.epidemic-books__text,
+.horror-books__text {
     font-size: 28px;
     color: var(--color-primary-dark-blue);    
 }
