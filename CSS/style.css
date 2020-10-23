@@ -409,6 +409,27 @@ input::placeholder {
     background: var(--color-primary-dark-blue);
 }
 
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--color-primary-white);
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    border-radius: 100px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    background-color: var(--color-primary-dark-pink);
+}
+
 
 /* MEDIA QUERIES */
 
