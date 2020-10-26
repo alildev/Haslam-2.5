@@ -24,3 +24,21 @@ function changeImg() {
 }
 
 window.onload = changeImg;
+
+
+//DROPDOWN MENU
+
+//Toggle on user click between open and close content
+function dropDown () {
+    document.getElementById("dropDown").classList.toggle("open");
+}
+
+//Close dropdown if use clicks outside of target
+window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+        let dropDown = document.getElementById("dropDown");
+            if (dropDown.classList.contains('open')) {
+                dropDown.classList.remove('open');
+            }
+    }
+}
